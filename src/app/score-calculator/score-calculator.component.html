@@ -1,0 +1,44 @@
+<div class="container">
+  <mat-card class="card">
+    <mat-card-content>
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-6">
+          <form #scoreForm="ngForm" (ngSubmit)="onSubmit(scoreForm)">
+            <div class="col-md-12">
+              <h2>Bowling Score Calculator</h2>
+            </div>
+            <div class="form-group">
+              <mat-form-field >
+                <mat-label>First Roll</mat-label>
+                <input maxlength="10" matInput name="firstRoll" ngModel >
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field >
+                <mat-label>Second Roll</mat-label>
+                <input maxlength="10" matInput name="secondRoll" ngModel >
+              </mat-form-field>
+            </div>
+            <button mat-raised-button type="submit" color="primary">Add Round</button>      
+          </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Round Results:</h3>
+      <ul *ngIf="roundScores.length > 0">
+        <li *ngFor="let roundScore of roundScores">{{ roundScore }}</li>
+      </ul>
+      <ul *ngIf="roundScores.length == 0">
+        <li>{{0}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Total Score: {{ totalScore }}</h3>
+    </div>
+  </div>
+  </mat-card-content>
+  </mat-card>
+</div>

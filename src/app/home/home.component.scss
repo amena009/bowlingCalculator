@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 96vh; /* Adjust as needed */
+}
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    padding: 5px;
+  }
+
+  button {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: block;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+   // margin-left: 660px;
+    &:hover {
+      background-color: #388E3C;
+    }
+  }
+
+  .background {
+    background-image: linear-gradient(to bottom, rgba(536, 900, 200, 0.9), rgba(800, 800, 800, 0.3))
+  }
+
+ 
+  
