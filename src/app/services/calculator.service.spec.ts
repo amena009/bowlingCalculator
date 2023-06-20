@@ -54,18 +54,5 @@ describe('ScoreCalculatorService', async () => {
     });
   });
 
-//   it('should calculate the score correctly for a strike followed by a spare', () => {
-//     const score = [
-//       { first: 10, second: 0 },
-//       { first: 3, second: 7 },
-//       { first: 5, second: 2 },
-//     ];
-//     const expectedScore =  46;
-
-//     service.calculateScore(score).subscribe((result) => {
-//       expect(result.totalScore).toEqual(expectedScore);
-//     });
-//   });
-
 });
 

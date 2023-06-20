@@ -27,7 +27,7 @@ describe('HomeComponent', () => {
 
   it('should display welcome message', () => {
     const welcomeMessage = fixture.nativeElement.querySelector('h1');
-    expect(welcomeMessage.textContent).toContain('Welcome to the Bowling game!');
+    expect(welcomeMessage.textContent).toContain('Welcome to the Bowling Game!');
   });
 
   it('should navigate to score calculator page when button is clicked', () => {

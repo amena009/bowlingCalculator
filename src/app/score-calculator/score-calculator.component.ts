@@ -50,7 +50,6 @@ export class ScoreCalculatorComponent implements OnInit, OnDestroy {
       if (first <= 10 && second <= 10) {
       
         this.frames = [...this.frames, { first, second }];
-        // this.calculateScore();
         this.calculatorFacade.loadScoreCalculator(this.frames);
         this.calculatorFacade.getScoreDetails()
           .pipe(takeUntil(this.destroy$))
@@ -66,13 +65,14 @@ export class ScoreCalculatorComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this.destroy$))
       .subscribe((error: CustomErrors) => {
         if (error) {
-         // console.log(error);
-         alert("Entered score should be a digit and not more than 10.")
+         alert("Entered score should not be more than 10.")
         }
       });
       this.firstRoll = 0;
       this.secondRoll = 0;
     }
+    } else {
+        alert ("Entered score is not a number.");
     }
   }
 

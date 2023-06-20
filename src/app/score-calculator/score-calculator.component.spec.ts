@@ -39,23 +39,6 @@ describe('ScoreCalculatorComponent', () => {
     expect(secondRollInput.nativeElement.value).toEqual('');
   });
 
-
-  // it('should update component properties when input values change', () => {
-  //   const firstRollInput = fixture.debugElement.query(By.css('input[name="firstRoll"]'));
-  //   const secondRollInput = fixture.debugElement.query(By.css('input[name="secondRoll"]'));
-
-  //   // Simulate entering values in the input fields
-  //   firstRollInput.nativeElement.value = '3';
-  //   secondRollInput.nativeElement.value = '4';
-  //   firstRollInput.nativeElement.dispatchEvent(new Event('input'));
-  //   secondRollInput.nativeElement.dispatchEvent(new Event('input'));
-  //   fixture.detectChanges();
-
-  //   // Check if component properties have been updated
-  //   expect(component.firstRoll).toEqual(3);
-  //   expect(component.secondRoll).toEqual(4);
-  // });
-
   it('should call onSubmit method when form is submitted', () => {
     spyOn(component, 'onSubmit');
 
